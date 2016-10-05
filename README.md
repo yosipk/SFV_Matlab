@@ -16,8 +16,8 @@ The directory 'data' should contain features for image, one set of images per fi
 Each file contains two arrays:
 * d is D x N array of patch appearance descriptors (eg. for SIFT D = 128)
 * f is 4 x N array of patch position descriptors:
-** first two rows describe the position of the patch (x,y) in the image plane
-** the last row is the patch size
+  * first two rows describe the position of the patch (x,y) in the image plane
+  * the last row is the patch size
 
 SIFT descriptors can be extracted using [VLFeat](http://www.vlfeat.org).
 
@@ -26,9 +26,13 @@ parameters of the pipeline can be learned by running the main script (classif_pi
 Before, make sure you have [YAEL](http://yael.gforge.inria.fr) and [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) installed. 
 
 Example:
+
 libsvm_path = PATH_TO_LIBSVM_MATLAB_INTERFACE;
+
 yael_path = PATH_TO_YAEL_MATLAB_INTERFACE;
+
 root_dir = PATH_TO_ROOT_DIR; % that contains 4 subdirectories
+
 classif_pipeline
 
 Inside the script all the parameters of the process are set: the number of appearance and
@@ -40,5 +44,6 @@ Running script will learn all the generative models, create Fisher vector repres
 For multi-class logistic regression the function logregFit from [PMTK3](http://code.google.com/p/pmtk3) can be used.
 
 If you use this code for your publication, please cite our ICCV 2011 paper:
+
 [Krapac, Verbeek, Jurie: "Modeling Spatial Layout with Fisher Vectors for Image
 Categorization", ICCV 2011](http://hal.inria.fr/inria-00612277/en).
