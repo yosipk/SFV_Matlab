@@ -26,14 +26,12 @@ parameters of the pipeline can be learned by running the main script (classif_pi
 Before, make sure you have [YAEL](http://yael.gforge.inria.fr) and [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) installed. 
 
 Example:
-
+~~~~
 libsvm_path = PATH_TO_LIBSVM_MATLAB_INTERFACE;
-
 yael_path = PATH_TO_YAEL_MATLAB_INTERFACE;
-
 root_dir = PATH_TO_ROOT_DIR; % that contains 4 subdirectories
-
 classif_pipeline
+~~~~
 
 Inside the script all the parameters of the process are set: the number of appearance and
 position components, the type of appearance and position models, the normalizations, the
